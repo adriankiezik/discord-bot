@@ -9,7 +9,8 @@ const characterCreate = (message, parsedMessage) => {
         } else {
             Character.create({
                 ownerID: parsedMessage.message.author.id,
-                name: parsedMessage.message.author.username
+                name: parsedMessage.message.author.username,
+                description: "I'm to lazy to set my description."
             }, err => {
                 if(err) {sendConsole('err', err)}
                 message.channel.send(`Character named ${parsedMessage.message.author.username} has been created!`)

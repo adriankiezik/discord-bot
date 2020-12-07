@@ -3,9 +3,10 @@ const { prefix } = require("../config.js");
 
 const memory = require("../commands/admin/memory.js");
 const uptime = require('../commands/util/uptime.js');
-const characterCreate = require('../commands/character/character-create')
-const profile = require('../commands/character/profile')
-const { isAdmin } = require('../utils')
+const characterCreate = require('../commands/character/character-create');
+const profile = require('../commands/character/profile');
+const setDescription = require('../commands/character/set-description');
+const { isAdmin } = require('../utils');
 
 function parseMessage(message) {
     const parsed = parser.parse(message, prefix)
@@ -31,6 +32,9 @@ function parseMessage(message) {
             break;
         case "custom-background":
             customBackground(message, parsed)
+            break;
+        case "set-description":
+            setDescription(message, parsed)
             break;
     }
 }
