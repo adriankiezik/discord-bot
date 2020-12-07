@@ -1,0 +1,29 @@
+{
+  "name": "discord-rpg",
+  "version": "1.0.0",
+  "description": "Discord RPG game",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -q"
+  },
+  "keywords": [
+    "discord",
+    "rpg",
+    "mmo"
+  ],
+  "author": "Adrian Kiezik",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@jimp/plugin-circle": "^0.16.1",
+    "chalk": "^4.1.0",
+    "discord-command-parser": "^1.4.3",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "jimp": "^0.16.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.18"
+  }
+}
