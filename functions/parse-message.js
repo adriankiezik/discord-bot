@@ -3,9 +3,10 @@ const { prefix } = require("../config.js");
 
 const memory = require("../commands/admin/memory.js");
 const uptime = require('../commands/util/uptime.js');
-const characterCreate = require('../commands/character/character-create');
+const characterCreate = require('../commands/character/create');
 const profile = require('../commands/character/profile');
 const setDescription = require('../commands/character/set-description');
+const deleteCharacter = require('../commands/character/delete')
 const { isAdmin } = require('../utils');
 
 function parseMessage(message) {
@@ -36,6 +37,9 @@ function parseMessage(message) {
         case "set-description":
             setDescription(message, parsed)
             break;
+        case "delete-character":
+            deleteCharacter(message, parsed)
+            break
     }
 }
 

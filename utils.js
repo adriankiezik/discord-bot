@@ -18,7 +18,13 @@ function secondsToDhms(seconds) {
     return dDisplay + hDisplay + mDisplay + sDisplay;
 }
 
+function capitalizeFirstLetter(string) {
+    string = string.charAt(0).toUpperCase() + string.slice(1);
+    return string;
+}
+
 module.exports = {
-    isAdmin: isAdmin,
-    secondsToDhms: secondsToDhms
+    isAdmin,
+    secondsToDhms,
+    capitalizeFirstLetter
 }
